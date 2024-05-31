@@ -2,7 +2,7 @@ import allure
 import requests
 import random
 import string
-from const import Const
+from data import Url
 
 
 
@@ -34,7 +34,7 @@ def register_new_courier_and_return_login_password():
         "firstName": first_name
     }
 
-    response = requests.post(Const.CREATE_COURIER, data=payload)
+    response = requests.post(Url.CREATE_COURIER, data=payload)
 
     if response.status_code == 201:
         login_pass.append(login)
@@ -45,12 +45,12 @@ def register_new_courier_and_return_login_password():
 
 @allure.step('удаление курьера')
 def delete_courier(login, password):
-    response_post = requests.post(Const.LOGIN_COURIER, data={
+    response_post = requests.post(Url.LOGIN_COURIER, data={
         "login": login,
         "password": password,
     })
     courier_id = response_post.json()['id']
-    requests.delete(f'{Const.DELETE_COURIER}/{courier_id}')
+    requests.delete(f'{Url.DELETE_COURIER}/{courier_id}')
 
 
 
