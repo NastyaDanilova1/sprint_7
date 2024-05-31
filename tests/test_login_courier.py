@@ -1,6 +1,5 @@
-import allure
-import requests
-from const import MessageText, Const
+
+from const import MessageText
 from for_help import *
 
 
