@@ -1,1 +1,8 @@
-the bigining
+Проект 7 спринта
+
+Тесты:
+test_create_courier.py - проверка создание курьера
+test_create_order.py - проверка создания заказа
+test_delete_courier.py - проверка удаления курьера
+test_login_courier.py - проверка авторизации курьера
+test_order_list.py - проверка полного списка заказов
