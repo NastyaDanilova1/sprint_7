@@ -5,7 +5,7 @@ from data import *
 
 
 class TestCreateOrder:
-    @allure.step("создание заказа с разными цветами самоката")
+    @allure.title("создание заказа с разными цветами самоката")
     @pytest.mark.parametrize("color", [["BLACK"], ["GREY"], ["GREY", "BLACK"], []])
     def test_create_order_with_color(self,color):
         payload = UserData.user
